@@ -1,0 +1,175 @@
+/* ======================================================================
+ component
+====================================================================== */
+
+.c_cv {
+  width: 100%;
+  height: 200px;
+  background: $black;
+
+  .inner {
+    width: $content_width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px 0 0;
+
+    ._txt {
+      font-size: 18px;
+      font-weight: bold;
+      color: $white;
+      text-align: center;
+    }
+
+    .btn_grp {
+      width: 800px;
+      margin: 30px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.c_col_box {
+  .inner {
+    ._col_list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin: 40px auto 0;
+
+      @include sp() {
+        flex-wrap: wrap;
+      }
+
+      .items {
+        // width: 372px;
+        position: relative;
+
+        @include sp() {
+          width: 100%;
+        }
+
+        // &:last-child {
+        //   margin: 0;
+        // }
+
+        ._img_box {
+          display: block;
+          width: 100%;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        ._img {
+          width: initial;
+
+          @include sp() {
+            width: 100%;
+          }
+        }
+
+        ._col_tag {
+          display: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 100px 100px 0;
+          border-color: transparent #073763 transparent transparent;
+          color: #fff;
+
+          &::before {
+            content: "Point";
+            position: absolute;
+            color: #fff;
+            transform: rotate(45deg);
+            font-size: 16px;
+            top: 15px;
+            left: 55px;
+          }
+        }
+
+        ._col_ttl {
+          font-size: 22px;
+          font-weight: 500;
+          margin: 15px 0 0;
+          position: relative;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          color: $base;
+          line-height: 32px;
+
+          @include sp() {
+            font-size: 16px;
+            margin: 10px 0 0;
+            text-align: center;
+          }
+        }
+
+        ._col_txt {
+          margin: 21px 0 0;
+          font-size: 16px;
+          letter-spacing: 1.7px;
+          line-height: 24px;
+
+          @include sp() {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c_overview {
+  .inner {
+    .txt {
+      margin: 0 auto;
+      line-height: 2.3;
+    }
+
+    .l_box {
+      display: flex;
+      justify-content: space-between;
+      width: 1160px;
+      margin: 50px auto 0;
+
+      ._left {
+        width: 49%;
+        padding: 30px 0 0;
+
+        ._txt {
+          margin: 30px 0 0;
+        }
+
+        .c_txt {
+          font-size: 21px;
+          margin: 30px 0 0;
+        }
+      }
+
+      ._right {
+        width: 49%;
+        height: 300px;
+        background: #ddd;
+
+        ._img_box {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}
+
+/* =================================
+ title
+================================= */
