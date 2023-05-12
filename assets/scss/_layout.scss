@@ -36,11 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  &._1 {}
-
-  &._2 {
     .left_box {
       display: flex;
       justify-content: space-between;
@@ -120,6 +116,18 @@
   .l_article {
     background: #dfdfdf;
     height: auto;
+  }
+}
+
+/* =================================
+ layout_compornent
+================================= */
+
+.l_card_list {
+  .card_inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
