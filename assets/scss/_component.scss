@@ -21,11 +21,28 @@
     height: 100%;
     padding: 100px 0;
 
+    @include sp() {
+      width: 100%;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      height: auto;
+    }
+
     .left {
+      @include sp() {
+        width: 100%;
+      }
+
       .kv_ttl {
         color: #fff;
         font-weight: 900;
         font-size: 45px;
+
+        @include sp() {
+          text-align: center;
+        }
       }
 
       .catchcopy {
@@ -33,6 +50,10 @@
         color: #fff;
         font-weight: 700;
         font-size: 21px;
+
+        @include sp() {
+          text-align: center;
+        }
       }
 
       .desc {
@@ -42,6 +63,10 @@
         font-size: 16px;
         letter-spacing: 1.7px;
         line-height: 32px;
+
+        @include sp() {
+          padding: 0 15px;
+        }
       }
     }
 
@@ -57,10 +82,44 @@
   }
 }
 
+.c_nav {
+  width: 100%;
+  height: 40px;
+  background: $accent_bg;
+
+  .lists {
+    width: $content_width;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .items {
+      position: relative;
+      border-left: 1px solid #ccc;
+      padding: 0 16px;
+
+      &:last-child {
+        border-right: 1px solid #ccc;
+      }
+
+      .link {
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+}
+
 .c_cv {
   width: 100%;
   height: 200px;
-  background: $black;
+  background: $accent_bg;
+
+  @include sp() {
+    height: auto;
+  }
 
   .inner {
     width: $content_width;
@@ -68,11 +127,24 @@
     margin: 0 auto;
     padding: 30px 0 0;
 
+    @include sp() {
+      width: 100%;
+      padding: 30px 0;
+    }
+
     ._txt {
       font-size: 18px;
       font-weight: bold;
-      color: $white;
+      color: #fff;
       text-align: center;
+    }
+
+    .c_btn_grp {
+      .u_btn_1 {
+        @include sp() {
+          width: 90%;
+        }
+      }
     }
   }
 }
@@ -82,6 +154,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include sp() {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.c_bot_btn_grp {
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include sp() {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .c_col_box {
@@ -153,14 +244,14 @@
 
         ._col_ttl {
           font-size: 22px;
-          font-weight: 500;
+          font-weight: 900;
           margin: 15px 0 0;
           position: relative;
           display: flex;
           justify-content: left;
           align-items: center;
-          color: $base;
           line-height: 32px;
+          color: $base;
 
           @include sp() {
             font-size: 16px;
@@ -174,6 +265,7 @@
           font-size: 16px;
           letter-spacing: 1.7px;
           line-height: 24px;
+          color: $base_bg_color;
 
           @include sp() {
             margin: 10px 0 0;
@@ -189,6 +281,7 @@
     .txt {
       margin: 0 auto;
       line-height: 2.3;
+      color: $base_bg_color;
     }
 
     .l_box {
@@ -197,23 +290,38 @@
       width: 1160px;
       margin: 50px auto 0;
 
+      @include sp() {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
       ._left {
         width: 49%;
         padding: 30px 0 0;
 
+        @include sp() {
+          width: 100%;
+        }
+
         ._txt {
           margin: 30px 0 0;
+          color: $base_bg_color;
         }
 
         .c_txt {
           font-size: 21px;
           margin: 30px 0 0;
+          color: $base_bg_color;
         }
       }
 
       ._right {
         width: 49%;
         height: 300px;
+
+        @include sp() {
+          width: 100%;
+        }
 
         ._img_box {
           display: block;
@@ -224,9 +332,15 @@
 }
 
 .c_card_item {
+  width: 28%;
   display: block;
   cursor: pointer;
   transition: all ease-in-out .3s;
+
+  @include sp () {
+    width: 100%;
+    margin: 20px 0 0;
+  }
 
   &:hover {
     box-shadow: 0px 0px 15px -5px #777777;
@@ -241,14 +355,319 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    position: relative;
+
+    .cat {
+      position: absolute;
+      width: fit-content;
+      padding: 5px 15px;
+      background: $base;
+      color: $base_font;
+      font-size: 12px;
+      bottom: -10px;
+      left: 20px;
+    }
   }
 
   .info_box {
     width: 100%;
     height: 200px;
     background: #fff;
+    padding: 15px;
+
+    .ttl {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .lists {
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
+
+      .items {
+        font-size: 12px;
+        margin: 0 12px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
   }
 }
+
+.c_table {
+  .inner {
+    margin: 0 auto;
+    overflow: hidden;
+
+    .c_plan_table {
+      .table_contents {
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+        width: 1000px;
+        margin: 0 auto;
+        overflow-x: scroll;
+
+        tr {
+          text-align: center;
+          padding: 7px 0;
+          border-right: solid 1px #ddd;
+          border-left: solid 1px #ddd;
+          width: 155px;
+
+          &:nth-child(2) {
+            td {
+              font-size: 30px;
+            }
+          }
+
+          &:last-child {
+            border-bottom: solid 1px #ddd;
+          }
+        }
+
+        th {
+          text-align: center;
+          padding: 20px 0;
+          border-right: solid 1px #ddd;
+          border-left: solid 1px #ddd;
+          width: 155px;
+
+          &:nth-child(1) {
+            background-color: #dddddd;
+          }
+
+          &:nth-child(3) {
+            background-color: $accent_bg;
+            color: white;
+          }
+
+          &.popular {
+            position: relative;
+            background-color: $accent_bg;
+            color: #fff;
+
+            .no1 {
+              position: absolute;
+              top: -10px;
+              left: 20px;
+              background: #D1597B;
+              width: fit-content;
+              font-size: 12px;
+              border-radius: 10px;
+              padding: 5px 10px;
+            }
+          }
+        }
+
+        td {
+          text-align: center;
+          padding: 17px 0;
+          border-right: solid 1px #ddd;
+          border-left: solid 1px #ddd;
+          width: 33%;
+          background: #fff;
+
+          .price {
+            font-size: 32px;
+            font-weight: 900;
+          }
+
+          i {
+            margin: 0 5px 0 0;
+
+            &.fa-check {
+              color: #23AC38;
+            }
+
+            &.fa-xmark {
+              color: #f34955;
+            }
+          }
+        }
+      }
+
+      @include sp() {
+        padding: 20px;
+        width: calc(333 * 3);
+        overflow-x: scroll;
+      }
+    }
+  }
+}
+
+.c_info_list {
+  width: 1000px;
+  margin: 0 auto;
+  height: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+
+  @include sp() {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .lists {
+    .items {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      margin: 20px 0 0;
+      border-bottom: solid 1px #aaa;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include sp() {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      .list_cell {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        &.left {
+          width: 20%;
+          padding: 0 0 0 20px;
+          font-weight: bold;
+
+          @include sp() {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        &.right {
+          width: 70%;
+          padding: 0 0 0 20px;
+          box-sizing: border-box;
+
+          @include sp() {
+            width: 100%;
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c_link_list {
+  width: 1000px;
+  margin: 0 auto;
+  height: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+
+  @include sp() {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .lists {
+    .items {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: left;
+      flex-wrap: wrap;
+      margin: 20px 0 0;
+      padding: 15px 0;
+      border-bottom: solid 1px #aaa;
+      transition: all ease-in-out .3s;
+
+      &:hover {
+        .link {
+          .ttl {
+            text-decoration: none;
+          }
+        }
+      }
+
+      @include sp() {
+        height: auto;
+        padding: 0 0 20px;
+      }
+
+      .link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        @include sp() {
+          flex-direction: column-reverse;
+          justify-content: center;
+        }
+
+        .info {
+          width: 20%;
+
+          @include sp() {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            margin: 15px 0 0;
+          }
+
+          time {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #80858b;
+            margin: 0 10px 0 0;
+            text-align: center;
+          }
+
+          .cat {
+            width: 80%;
+            margin: 10px auto 0;
+            background: #f19753;
+            padding: 0 5px;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include sp() {
+              margin: 0;
+            }
+          }
+        }
+
+        .ttl {
+          width: 80%;
+          text-decoration: underline;
+          line-height: 2;
+          letter-spacing: 1.2px;
+
+          @include sp() {
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* =================================
  title

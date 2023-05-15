@@ -1,76 +1,6 @@
 /* ======================================================================
  utility
 ====================================================================== */
-// clearfix
-.u_cf {
-  @include cf;
-}
-
-@include pc_tab {
-  .u_pc {
-    display: block;
-
-    &_i {
-      display: inline;
-    }
-
-    &_ib {
-      display: inline-block;
-    }
-
-    &_f {
-      display: flex;
-    }
-
-    &_if {
-      display: inline-flex;
-    }
-  }
-
-  .u_sp {
-    display: none;
-
-    &_i,
-    &_ib,
-    &_f,
-    &_if {
-      display: none;
-    }
-  }
-}
-
-@include sp {
-  .u_pc {
-    display: none;
-
-    &_i,
-    &_ib,
-    &_f,
-    &_if {
-      display: none;
-    }
-  }
-
-  .u_sp {
-    display: block;
-
-    &_i {
-      display: inline;
-    }
-
-    &_ib {
-      display: inline-block;
-    }
-
-    &_f {
-      display: flex;
-    }
-
-    &_if {
-      display: inline-flex;
-    }
-  }
-}
 
 /* ======================================================================
  ttl
@@ -79,6 +9,7 @@
   font-size: 45px;
   font-weight: bold;
   padding: 40px 0;
+  color: $base_bg_color;
 }
 
 .u_ttl_2 {
@@ -89,6 +20,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: $base_bg_color;
 
   .en {
     font-size: 18px;
@@ -123,14 +55,13 @@
   font-weight: bold;
   transition: all ease-in-out .3s;
 
-  &:hover {
-    background: $base_hover;
+  @include sp() {
+    width: 100%;
   }
 }
 
 .u_tel_btn {
   font-size: 18px;
-  color: #fff;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -177,8 +108,72 @@
   }
 }
 
+/* ======================================
+btn_custom_style
+====================================== */
+.radius_10 {
+  border-radius: 10px;
+}
+
+.radius_50 {
+  border-radius: 50px;
+}
+
+.radius_circle {
+  border-radius: 50%;
+}
+
+/* ======================================
+btn_action
+====================================== */
+.u_arrow {
+  position: relative;
+
+  &:hover {
+    background: $base;
+
+    &::after {
+      transform: translate(10px, -50%);
+    }
+  }
+
+  &::after {
+    content: "\f061";
+    font-family: 'Font Awesome 6 Free';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: all ease-in-out .3s;
+  }
+}
+
+.u_bg_change {
+  &:hover {
+    background: $base_hover;
+  }
+}
+
+.u_push {
+  box-shadow: 0px 5px 0px $base_hover;
+
+  &._cv_btn {
+    background-color: $base_reverse;
+    box-shadow: 0px 5px 0px $base_reverse_hover;
+
+    &:hover {
+      box-shadow: 0px 1px 0px $base_reverse_hover;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 0px $base_hover;
+    transform: translateY(4px);
+  }
+}
+
 /* ======================================================================
- siza compornent
+ change font
 ====================================================================== */
 .u_osw {
   font-family: "Oswald", sans-serif;
@@ -716,13 +711,48 @@ padding
   padding-bottom: 100px;
 }
 
+/* ======================================
+position
+====================================== */
+
 .postion_rel {
   position: relative;
 }
 
+.postion_abs {
+  position: absolute;
+}
+
+/* ======================================
+text-align
+====================================== */
+.align_center {
+  text-align: center;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_right {
+  text-align: right;
+}
+
+/* ======================================
+sp
+====================================== */
+@include sp() {
+  .w_sp_full {
+    width: 100%;
+  }
+}
+
+/* ======================================
+other
+====================================== */
 ._bg_dummy {
-  background-color: #222222;
-  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: $base_bg_color;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23aaaaaa' fill-opacity='0.35'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   &::after {
     content: "DUMMY";
@@ -730,21 +760,85 @@ padding
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: $base_bg;
     font-size: 21px;
     font-weight: bold;
   }
 }
 
-.align_center {
-  text-align: center;
+// clearfix
+.u_cf {
+  @include cf;
 }
 
-.u_c_base {
-  color: $base;
+@include pc_tab {
+  .u_pc {
+    display: block;
+
+    &_i {
+      display: inline;
+    }
+
+    &_ib {
+      display: inline-block;
+    }
+
+    &_f {
+      display: flex;
+    }
+
+    &_if {
+      display: inline-flex;
+    }
+  }
+
+  .u_sp {
+    display: none;
+
+    &_i,
+    &_ib,
+    &_f,
+    &_if {
+      display: none;
+    }
+  }
+}
+
+@include sp {
+  .u_pc {
+    display: none;
+
+    &_i,
+    &_ib,
+    &_f,
+    &_if {
+      display: none;
+    }
+  }
+
+  .u_sp {
+    display: block;
+
+    &_i {
+      display: inline;
+    }
+
+    &_ib {
+      display: inline-block;
+    }
+
+    &_f {
+      display: flex;
+    }
+
+    &_if {
+      display: inline-flex;
+    }
+  }
 }
 
 .u_logo {
   font-size: 35px;
   font-weight: bold;
+  color: $base_bg_color;
 }

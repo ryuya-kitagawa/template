@@ -31,12 +31,14 @@
 // aタグのカラー変更
 //=================================
 @mixin a_tag($color1, $color2) {
+
   &:link,
   &:active,
   &:visited {
     color: $color1;
     cursor: pointer;
   }
+
   &:hover {
     color: $color2;
   }
@@ -49,17 +51,21 @@
   &:placeholder-shown {
     color: $color;
   }
+
   &::-webkit-input-placeholder {
     color: $color;
   }
+
   &:-moz-placeholder {
     color: $color;
     opacity: 1;
   }
+
   &::-moz-placeholder {
     color: $color;
     opacity: 1;
   }
+
   &:-ms-input-placeholder {
     color: $color;
   }
@@ -73,11 +79,13 @@
     @content;
   }
 }
+
 @mixin mq_min($width) {
   @media screen and (min-width: $width + px) {
     @content;
   }
 }
+
 @mixin mq_max($width) {
   @media screen and (max-width: $width + px) {
     @content;
@@ -90,26 +98,31 @@
     @content;
   }
 }
+
 @mixin sp {
   @media screen and (max-width: $sp_bp) {
     @content;
   }
 }
+
 @mixin tab {
   @media screen and (min-width: $sp_bp + 1px) and (max-width: $pc_bp - 1px) {
     @content;
   }
 }
-@mixin pc_tab{
+
+@mixin pc_tab {
   @media screen and (min-width: $sp_bp + 1px) {
     @content;
   }
 }
+
 @mixin sp_tab {
   @media screen and (max-width: $pc_bp - 1px) {
     @content;
   }
 }
+
 @mixin pc_content {
   @media screen and (min-width: $pc_bp) and (max-width: $content_width) {
     @content;
@@ -125,27 +138,39 @@
     @content;
   }
 }
+
 // FireFox
 @mixin firefox {
-  _:lang(x)::-moz-placeholder, & {
+
+  _:lang(x)::-moz-placeholder,
+  & {
     @content;
   }
 }
+
 // Edge
 @mixin edge {
-  _:lang(x)::-ms-, & {
+
+  _:lang(x)::-ms-,
+  & {
     @content;
   }
 }
+
 // IE(11)
 @mixin ie {
-  _:-ms-lang(x)::-ms-backdrop, & {
+
+  _:-ms-lang(x)::-ms-backdrop,
+  & {
     @content;
   }
 }
+
 // Safari
 @mixin safari {
-  _:lang(x)+_:-webkit-full-screen-document, & {
+
+  _:lang(x)+_:-webkit-full-screen-document,
+  & {
     @content;
   }
 }
@@ -155,6 +180,7 @@
 //=================================
 @mixin ofi($size) {
   object-fit: $size;
+
   @include ie {
     font-family: 'object-fit: #{$size};'
   }
@@ -166,7 +192,8 @@
 @mixin hide_scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
-    display:none;
+    display: none;
   }
 }

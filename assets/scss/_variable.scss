@@ -10,6 +10,9 @@ $content_width: 1366px;
 // SP時の左右の余白（片方）
 $sp_side_padding: 20px;
 
+$theme: "dark";
+$theme_color: "red";
+
 //=================================
 // breakpoint
 //=================================
@@ -27,6 +30,57 @@ $sp_bp: 768px;
 //=================================
 $font_1: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', '游ゴシック', YuGothic, sans-serif;
 
+
+//=================================
+// base color asset
+//=================================
+//blue
+$base: #007FFF;
+$basea: #007FFF77;
+$base_hover: #01579b;
+$base_font: #ffffff;
+
+//blue2
+// $base: #0069B2;
+// $basea: #0069B277;
+// $base_hover: #01579b;
+// $base_font: #ffffff;
+
+//red
+// $base: #D1597B;
+// $basea: #D1597B77;
+// $base_hover: #82374c;
+// $base_font: #ffffff;
+
+//orange
+$base: #F19753;
+$basea: #F1975377;
+$base_hover: #ab6c3c;
+$base_font: #ffffff;
+$base_reverse: #53ADF1;
+$base_reverse_hover: #3978a8;
+
+// green
+// $base: #23AC38;
+// $basea: #23AC3877;
+// $base_hover: #166b23;
+// $base_font: #ffffff;
+
+
+//base_bg_dark
+$base_bg: #222222;
+$base_bg_even: #454D55;
+$accent_bg: #2C343E;
+$base_inner_bg: #F6F8F8;
+$base_bg_color: #ffffff;
+
+//base_bg_light
+// $base_bg: #ffffff;
+// $base_bg_even: #efefef;
+// $accent_bg: #2C343E;
+// $base_inner_bg: #F6F8F8;
+// $base_bg_color: #222222;
+
 //=================================
 // color
 //=================================
@@ -35,10 +89,6 @@ $black: #222;
 $white: #fff;
 
 $red: #E02424;
-
-$base: #007FFF;
-$basea: #007FFF77;
-$base_hover: #01579b;
 
 $color_1: #F78500;
 
