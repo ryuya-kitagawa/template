@@ -7,7 +7,7 @@
   <title>テンプレート</title>
 
   <link rel="stylesheet" href="./assets/css/common.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/sample2.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./assets/css/lib/scroll-hint.css">
 
 </head>
-<body>
+<body class="sample2">
   <header class="l_header">
     <div class="inner">
       <div class="u_logo">
@@ -56,14 +56,8 @@
     <article class="l_article">
 
       <section class="l_content c_kv">
-        <picture class="kv_img">
-          <source srcset="./assets/img/webp/mv4.jpg.webp" media="(min-width: 769px)" type="image/webp" width="100%" height="100%" alt="">
-          <source srcset="./assets/img/webp/mv4.jpg.webp" media="(max-width: 768px)" type="image/webp" width="360" height="530" alt="">
-          <img src="./assets/img/webp/mv4.jpg.webp" width="1920" height="100%" alt="kv" class="u_pc" alt="">
-          <img src="./assets/img/webp/mv4.jpg.webp" width="360" height="530" alt="kv" class="u_sp" alt="">
-        </picture>
-        <div class="kv_txt_box w_content">
-          <div class="left align_center m_top_100">
+        <div class="kv_txt_box">
+          <div class="left">
             <h1 class="kv_ttl">サービス名称</h1>
             <p class="catchcopy">サービスのキャッチコピー</p>
             <p class="desc">
@@ -72,14 +66,35 @@
               どのようなメリットがあるのか、ここで説明しておくと<br>
               下セクションの内容も見てくれるようになります。
             </p>
-            <!-- <div class="c_btn_grp">
+            <div class="c_btn_grp">
               <a href="" class="u_btn_1 w_300 h_60 u_arrow">お問い合わせ</a>
-              <a href="" class="u_btn_1 w_300 h_60 u_arrow">お問い合わせ</a>
-            </div> -->
+              <!-- <a href="" class="u_btn_1 w_300 h_60 u_arrow">お問い合わせ</a> -->
+            </div>
           </div>
-          <!-- <div class="right postion_rel _bg_dummy u_pc" style="background: #aaa;">
-          </div> -->
+          <div class="right">
+            <picture class="_img">
+              <source srcset="./assets/img/webp/mv_part1.png.webp" media="(min-width: 769px)" type="image/webp" width="100%" height="100%" alt="">
+              <source srcset="./assets/img/webp/mv_part1.png.webp" media="(max-width: 768px)" type="image/webp" width="360" height="530" alt="">
+              <img src="./assets/img/webp/mv_part1.png.webp" width="1920" height="100%" alt="kv" class="u_pc" alt="">
+              <img src="./assets/img/webp/mv_part1.png.webp" width="360" height="530" alt="kv" class="u_sp" alt="">
+            </picture>
+          </div>
         </div>
+      </section>
+
+      <section class="c_cv">
+        <main class="inner w_content radius_10">
+          <p class="_txt">テキストテキストテキストテキスト</p>
+          <div class="c_btn_grp w_800">
+            <a href="" class="u_btn_1 w_400 h_80 f_21 u_bg_change">お問い合わせ</a>
+            <a href="tel:03-1111-1111" class="u_tel_btn w_400 m_left_30">
+              <p class="tel_txt">
+                      <span class="txt u_osw"><i class="fa-sharp fa-solid fa-phone"></i>03-1111-1111</span>
+                      <span class="time">お電話でのご相談 (平日 9:00~17:00)</span>
+                    </p>
+            </a>
+          </div>
+        </main>
       </section>
 
       <section class="l_content c_overview">
@@ -148,7 +163,7 @@
         </main>
       </section>
 
-      <section class="c_cv m_center">
+      <section class="c_cv">
         <main class="inner w_content radius_10">
           <p class="_txt">テキストテキストテキストテキスト</p>
           <div class="c_btn_grp w_800">
@@ -549,6 +564,7 @@
           </div>
         </div>
       </section>
+
       <section class="l_content">
         <div class="inner">
           <h2 class="u_contents_ttl">
