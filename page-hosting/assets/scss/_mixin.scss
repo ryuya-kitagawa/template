@@ -1,0 +1,199 @@
+//======================================================================
+// mixin
+//======================================================================
+
+//=================================
+// clearfix
+//=================================
+@mixin cf {
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+//=================================
+// safe-area
+//=================================
+@mixin safe_area {
+  padding-top: constant(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+//=================================
+// aタグのカラー変更
+//=================================
+@mixin a_tag($color1, $color2) {
+
+  &:link,
+  &:active,
+  &:visited {
+    color: $color1;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $color2;
+  }
+}
+
+//=================================
+// プレースホルダーのカラー変更
+//=================================
+@mixin placeholder($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+//=================================
+// media query
+//=================================
+@mixin mq($min_width, $max_width) {
+  @media screen and (min-width: $min_width + px) and (max-width: $max_width + px) {
+    @content;
+  }
+}
+
+@mixin mq_min($width) {
+  @media screen and (min-width: $width + px) {
+    @content;
+  }
+}
+
+@mixin mq_max($width) {
+  @media screen and (max-width: $width + px) {
+    @content;
+  }
+}
+
+// device
+@mixin pc {
+  @media screen and (min-width: $pc_bp) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $sp_bp) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: $sp_bp + 1px) and (max-width: $pc_bp - 1px) {
+    @content;
+  }
+}
+
+@mixin pc_tab {
+  @media screen and (min-width: $sp_bp + 1px) {
+    @content;
+  }
+}
+
+@mixin sp_tab {
+  @media screen and (max-width: $pc_bp - 1px) {
+    @content;
+  }
+}
+
+@mixin pc_content {
+  @media screen and (min-width: $pc_bp) and (max-width: $content_width) {
+    @content;
+  }
+}
+
+//=================================
+// css hack
+//=================================
+// Chrome(and Safari, Opera)
+@mixin chrome {
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @content;
+  }
+}
+
+// FireFox
+@mixin firefox {
+
+  _:lang(x)::-moz-placeholder,
+  & {
+    @content;
+  }
+}
+
+// Edge
+@mixin edge {
+
+  _:lang(x)::-ms-,
+  & {
+    @content;
+  }
+}
+
+// IE(11)
+@mixin ie {
+
+  _:-ms-lang(x)::-ms-backdrop,
+  & {
+    @content;
+  }
+}
+
+// Safari
+@mixin safari {
+
+  _:lang(x)+_:-webkit-full-screen-document,
+  & {
+    @content;
+  }
+}
+
+//=================================
+// object fit images
+//=================================
+@mixin ofi($size) {
+  object-fit: $size;
+
+  @include ie {
+    font-family: 'object-fit: #{$size};'
+  }
+}
+
+//=================================
+// hide scrollbar
+//=================================
+@mixin hide_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
