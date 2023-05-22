@@ -1015,7 +1015,202 @@
   }
 }
 
-/* hambarger menu */
+/* accordion menu */
+.accordion_menu_btn {
+  color: $base_font;
+  font-size: 16px;
+}
+
+.c_accordion_menu {
+  display: none;
+  position: absolute;
+  bottom: -215px;
+  left: 0;
+  background: $accent_bg;
+  color: $base_font;
+
+  .items {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      background: $base_font;
+
+      a.link {
+        color: $accent_bg;
+      }
+    }
+  }
+}
+
+/* pintarest img list */
+.c_img_list {
+
+  /*＝＝＝並び替えボタンのCSS*/
+  .sort_btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+
+    @include sp() {
+      justify-content: space-between;
+    }
+
+    li {
+      background: #eee;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 10px;
+      margin: 0 10px;
+
+      @include sp() {
+        width: 48%;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+      &.active {
+        /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
+        background: #ccc;
+      }
+    }
+  }
+
+  /*＝＝＝Muuriのレイアウトのための調整 */
+  .grid {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+      /*画像の下にできる余白を削除*/
+    }
+
+    .item {
+      display: block;
+      position: absolute;
+      width: 33%;
+      z-index: 1;
+
+      @include sp() {
+        width: 49.5%;
+      }
+
+      .item_content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .fancybox-thumbs {
+    background: transparent !important;
+  }
+
+  .fancybox-thumbs__list a:before {
+    border: 6px solid #FA999B;
+  }
+}
+
+/* img slider */
+.slider_box {
+  width: 100%;
+
+  .c_slider {
+    width: 94%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slick-slide {
+      margin: 0 10px;
+    }
+
+    .slick-prev {
+      position: absolute;
+      top: 42%;
+      cursor: pointer;
+      outline: none;
+      border-top: 2px solid #666;
+      border-right: 2px solid #666;
+      height: 15px;
+      width: 15px;
+      left: -1.5%;
+      transform: rotate(-135deg);
+    }
+
+    .slick-next {
+      position: absolute;
+      top: 42%;
+      cursor: pointer;
+      outline: none;
+      border-top: 2px solid #666;
+      border-right: 2px solid #666;
+      height: 15px;
+      width: 15px;
+      right: -1.5%;
+      transform: rotate(45deg);
+    }
+
+    .slick-dots {
+      text-align: center;
+      margin: 20px 0 0 0;
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      button {
+        color: transparent;
+        outline: none;
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        background: #ccc;
+      }
+
+      .slick-active {
+        button {
+          background: #333;
+        }
+      }
+    }
+  }
+}
+
+/* slide show */
+#slider {
+  width: 100%;
+  height: 95vh;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/* layout animation */
+.fadeInUpTrigger,
+.fadeInDownTrigger,
+.fadeInUpTriggerOnce {
+  opacity: 0;
+}
+
+.change-time {
+  @for $i from 1 through 30 {
+    &_#{$i*100}ms {
+      animation-duration: $i * 100ms;
+    }
+  }
+}
 
 /* =================================
  c_footer_link

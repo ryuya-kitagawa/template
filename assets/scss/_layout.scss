@@ -67,42 +67,90 @@
   box-shadow: 0px 8px 6px -10px #777777;
 
   .inner {
-    width: $content_width;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     @include sp() {
       width: 100%;
     }
 
-    .left_box {
+    .flex_box {
+      width: $content_width;
+      margin: 0 auto;
+      height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      @include sp() {
-        display: none;
-      }
+      .left_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      nav {
-        margin: 0 20px 0 0;
+        @include sp() {
+          display: none;
+        }
 
-        ul {
-          display: flex;
-          justify-content: space-between;
+        nav {
+          margin: 0 20px 0 0;
 
-          li {
-            margin: 0 10px 0 0;
+          ul {
+            display: flex;
+            justify-content: space-between;
 
-            a {
-              font-size: 16px;
-              color: $base_bg_color;
+            li {
+              margin: 0 10px 0 0;
+
+              a {
+                font-size: 16px;
+                color: $base_bg_color;
+              }
             }
           }
         }
+      }
+    }
+  }
+
+  &._fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: auto;
+
+    .inner {}
+
+    &.UpMove {
+      animation: UpAnime 0.5s forwards;
+    }
+
+    @keyframes UpAnime {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    }
+
+    &.DownMove {
+      animation: DownAnime 0.5s forwards;
+    }
+
+    @keyframes DownAnime {
+      from {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }

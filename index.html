@@ -6,55 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>テンプレート</title>
 
-  <link rel="stylesheet" href="./assets/css/common.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Serif+JP:wght@900&family=Oswald:wght@200;300;400;500;600;700&family=Teko&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="./assets/css/lib/scroll-hint.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
 
 </head>
 <body>
-  <header class="l_header">
+  <header class="l_header _fixed">
     <div class="inner">
-      <div class="u_logo">
-        <a href="./index.html">LOGO</a>
+      <div class="flex_box">
+        <div class="u_logo">
+          <a href="./index.html">LOGO</a>
+        </div>
+        <div class="left_box u_pc">
+          <nav>
+            <ul>
+              <li><a href="">SAMPLE1</a></li>
+              <li><a href="">内部リンク2</a></li>
+              <li><a href="">内部リンク3</a></li>
+              <li><a href="">内部リンク4</a></li>
+            </ul>
+          </nav>
+          <a href="" class="u_btn_1 w_200 h_40 u_push radius_10">お問い合わせ</a>
+          <div class="c_ham_menu"><span></span><span></span><span></span></div>
+        </div>
       </div>
-      <div class="left_box u_pc">
-        <nav>
-          <ul>
-            <li><a href="">SAMPLE1</a></li>
-            <li><a href="">内部リンク2</a></li>
-            <li><a href="">内部リンク3</a></li>
-            <li><a href="">内部リンク4</a></li>
-          </ul>
-        </nav>
-        <a href="" class="u_btn_1 w_200 h_40 u_push radius_10">お問い合わせ</a>
-        <div class="c_ham_menu"><span></span><span></span><span></span></div>
-      </div>
+      <nav class="c_nav u_pc">
+        <ul class="lists">
+          <li class="items">
+            <a href="sample1.html" class="link">SAMPLE1</a>
+          </li>
+          <li class="items">
+            <a href="sample2.html" class="link">SAMPLE2</a>
+          </li>
+          <li class="items postion_rel">
+            <!-- <a href="" class="link">DROPDOWN</a> -->
+            <button class="accordion_menu_btn">DROPDOWN</button>
+            <ul class="c_accordion_menu">
+              <li class="items"><a href="" class="link">item_link</a></li>
+              <li class="items"><a href="" class="link">item_link</a></li>
+              <li class="items"><a href="" class="link">item_link</a></li>
+              <li class="items"><a href="" class="link">item_link</a></li>
+              <li class="items"><a href="" class="link">item_link</a></li>
+            </ul>
+          </li>
+          <li class="items">
+            <a href="" class="link">SAMPLE4</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <nav class="c_nav u_pc">
-    <ul class="lists">
-      <li class="items">
-        <a href="sample1.html" class="link">SAMPLE1</a>
-      </li>
-      <li class="items">
-        <a href="sample2.html" class="link">SAMPLE2</a>
-      </li>
-      <li class="items">
-        <a href="" class="link">SAMPLE3</a>
-      </li>
-      <li class="items">
-        <a href="" class="link">SAMPLE4</a>
-      </li>
-    </ul>
-  </nav>
   <main class="l_main">
     <article class="l_article">
+
+      <div id="slider"></div>
 
       <section class="l_content c_kv">
         <picture class="kv_img">
@@ -73,27 +88,21 @@
               どのようなメリットがあるのか、ここで説明しておくと<br>
               下セクションの内容も見てくれるようになります。
             </p>
-            <!-- <div class="c_btn_grp">
-              <a href="" class="u_btn_1 w_300 h_60 u_arrow">お問い合わせ</a>
-              <a href="" class="u_btn_1 w_300 h_60 u_arrow">お問い合わせ</a>
-            </div> -->
           </div>
-          <!-- <div class="right postion_rel _bg_dummy u_pc" style="background: #aaa;">
-          </div> -->
         </div>
       </section>
 
-      <section class="l_content c_overview">
+      <section id="area" class="l_content c_overview">
         <main class="inner">
-          <h2 class="u_contents_ttl">
+          <h2 class="u_contents_ttl fadeInUpTriggerOnce">
 						<span class="en">CONTENTS</span>
 						<span class="ja">コンテンツ</span>
 						<div class="border"></div>
 					</h2>
-          <p class="desc_txt">
+          <p class="desc_txt fadeInUpTriggerOnce">
 						テキストが入ります。テキストが入ります。テキストが入ります。<span class="u_c_base">テキスト</span>が入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 					</p>
-          <div class="l_box">
+          <div class="l_box fadeInUpTriggerOnce">
             <div class="_box _left">
               <p class="u_logo">LOGO</p>
               <p class="c_txt u_c_base">タイトルなどの一文</p>
@@ -105,7 +114,7 @@
             </div>
           </div>
 
-          <div class="l_box">
+          <div class="l_box fadeInUpTriggerOnce">
             <div class="_box _right">
               <picture class="h_300 _img_box postion_rel _bg_dummy">
               </picture>
@@ -121,16 +130,16 @@
 
       <section class="l_content c_col_box">
         <main class="inner">
-          <h2 class="u_contents_ttl">
+          <h2 class="u_contents_ttl fadeInUpTriggerOnce">
 						<span class="en">CONTENTS</span>
 						<span class="ja">コンテンツ</span>
 						<div class="border"></div>
 					</h2>
-          <p class="desc_txt">
+          <p class="desc_txt fadeInUpTriggerOnce">
 						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 					</p>
 
-          <ul class="_col_list">
+          <ul class="_col_list fadeInUpTriggerOnce">
             <li class="items w_40_per">
               <picture class="h_300 _img_box postion_rel _bg_dummy">
               </picture>
@@ -150,7 +159,7 @@
       </section>
 
       <section class="c_cv m_center">
-        <main class="inner w_content radius_10">
+        <main class="inner w_content radius_10 fadeInUpTriggerOnce">
           <p class="_txt">テキストテキストテキストテキスト</p>
           <div class="c_btn_grp w_800">
             <a href="" class="u_btn_1 w_400 h_80 f_21 u_bg_change">お問い合わせ</a>
@@ -166,30 +175,30 @@
 
       <section class="l_content c_col_box">
         <main class="inner">
-          <h2 class="u_contents_ttl">
+          <h2 class="u_contents_ttl fadeInUpTriggerOnce change-time_800ms">
             <span class="en">CONTENTS</span>
             <span class="ja">コンテンツ</span>
             <div class="border"></div>
           </h2>
-          <p class="desc_txt">
+          <p class="desc_txt fadeInUpTriggerOnce change-time_1000ms">
 						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 					</p>
           <ul class="_col_list">
-            <li class="items w_30_per">
+            <li class="items w_30_per fadeInUpTriggerOnce change-time_1200ms">
               <picture class="h_300 _img_box postion_rel _bg_dummy">
               </picture>
               <p class="_col_tag"></p>
               <p class="_col_ttl">メリット1</p>
               <p class="_col_txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
             </li>
-            <li class="items w_30_per">
+            <li class="items w_30_per fadeInUpTriggerOnce change-time_1400ms">
               <picture class="h_300 _img_box postion_rel _bg_dummy">
               </picture>
               <p class="_col_tag"></p>
               <p class="_col_ttl">メリット2</p>
               <p class="_col_txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
             </li>
-            <li class="items w_30_per">
+            <li class="items w_30_per fadeInUpTriggerOnce change-time_1600ms">
               <picture class="h_300 _img_box postion_rel _bg_dummy">
               </picture>
               <p class="_col_tag"></p>
@@ -202,14 +211,14 @@
 
       <section class="l_content c_col_box">
         <div class="inner">
-          <h2 class="u_contents_ttl">
+          <h2 class="u_contents_ttl fadeInUpTriggerOnce change-time_800ms">
             <span class="en">CONTENTS</span>
             <span class="ja">コンテンツ</span>
             <div class="border"></div>
           </h2>
           <div class="l_card_list">
             <div class="card_inner">
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_1000ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -229,7 +238,7 @@
                   </div>
                 </main>
               </article>
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_1200ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -249,7 +258,7 @@
                   </div>
                 </main>
               </article>
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_1400ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -269,7 +278,7 @@
                   </div>
                 </main>
               </article>
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_1600ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -289,7 +298,7 @@
                   </div>
                 </main>
               </article>
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_1800ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -309,7 +318,7 @@
                   </div>
                 </main>
               </article>
-              <article class="c_card_item">
+              <article class="c_card_item fadeInUpTriggerOnce change-time_2000ms">
                 <header class="card_header">
                   <figure class="cap_img postion_rel _bg_dummy">
                     <figcaption class="cat">カテゴリー</figcaption>
@@ -332,7 +341,7 @@
             </div>
           </div>
           <div class="c_bot_btn_grp">
-            <a href="" class="u_btn_1 w_350 h_60 u_push radius_50">一覧を見る</a>
+            <a href="" class="u_btn_1 w_350 h_60 u_push radius_50 fadeInUpTriggerOnce change-time_2600ms">一覧を見る</a>
           </div>
         </div>
       </section>
@@ -549,6 +558,199 @@
             </ul>
           </div>
         </div>
+      </section>
+
+      <section id="area" class="l_content">
+        <main class="inner">
+          <h2 class="u_contents_ttl">
+                        <span class="en">CONTENTS</span>
+                        <span class="ja">コンテンツ</span>
+                        <div class="border"></div>
+                      </h2>
+
+          <div class="slider_box">
+            <ul class="c_slider">
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_01.jpg" alt=""></li>
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_02.jpg" alt=""></li>
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_03.jpg" alt=""></li>
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_04.jpg" alt=""></li>
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_05.jpg" alt=""></li>
+              <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_06.jpg" alt=""></li>
+            </ul>
+          </div>
+        </main>
+      </section>
+
+      <section class="l_content">
+        <main class="inner">
+          <h2 class="u_contents_ttl">
+                        <span class="en">CONTENTS</span>
+                        <span class="ja">コンテンツ</span>
+                        <div class="border"></div>
+                      </h2>
+
+          <div class="c_img_list">
+            <ul class="sort_btn">
+              <li class="sort00 active">全て</li>
+              <li class="sort01">グループ1</li>
+              <li class="sort02">グループ2</li>
+              <li class="sort03">グループ3</li>
+            </ul>
+
+            <ul class="grid">
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/01.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/01.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/02.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/02.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/03.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/03.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/04.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/04.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/05.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/05.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/06.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/06.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/07.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/07.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/08.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/08.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/09.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/09.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/10.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/10.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/11.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/11.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/12.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/12.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/13.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/13.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/14.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/14.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/15.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/15.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/16.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/16.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/17.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/17.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/18.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/18.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/19.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/19.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/20.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/20.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/21.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/21.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/22.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/22.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/23.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/23.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/24.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/24.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/25.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/25.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/26.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/26.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/27.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/27.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort01">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/28.jpg" data-fancybox="group1" data-caption="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/28.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort02">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/29.jpg" data-fancybox="group2" data-caption="グループ2キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/29.jpg" alt=""></a>
+                </div>
+              </li>
+              <li class="item sort03">
+                <div class="item_content">
+                  <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/30.jpg" data-fancybox="group3" data-caption="グループ3キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-2/img/30.jpg" alt=""></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
       </section>
 
       <section class="l_content">
@@ -833,6 +1035,12 @@
 
   <script src="./assets/js/lib/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/lib/scroll-hint.min.js"></script>
+  <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+  <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
   <script src="./assets/js/common.js"></script>
   <script src="./assets/js/fv.js"></script>
 </body>
