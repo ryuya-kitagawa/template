@@ -92,9 +92,12 @@ $(function () {
   var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
   if (windowwidth > 768) {
     var responsiveImage = [//PC用の画像
-      { src: 'C:/Users/elspc001/workspace/template/assets/img/mv1.jpg' },
-      { src: 'C:/Users/elspc001/workspace/template/assets/img/mv2.jpg' },
-      { src: 'C:/Users/elspc001/workspace/template/assets/img/mv3.jpg' }
+      // { src: 'C:/Users/elspc001/workspace/template/assets/img/mv1.jpg' },
+      // { src: 'C:/Users/elspc001/workspace/template/assets/img/mv2.jpg' },
+      // { src: 'C:/Users/elspc001/workspace/template/assets/img/mv3.jpg' }
+      { src: '../img/mv1.jpg' },
+      { src: '../img/mv2.jpg' },
+      { src: '../img/mv3.jpg' }
     ];
   } else {
     var responsiveImage = [//タブレットサイズ（768px）以下用の画像
