@@ -83,17 +83,27 @@
       justify-content: space-between;
       align-items: center;
 
+      @include sp() {
+        width: 90%;
+      }
+
       .left_box {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        @include sp() {
-          display: none;
+        .u_btn_1 {
+          @include sp() {
+            display: none;
+          }
         }
 
         nav {
           margin: 0 20px 0 0;
+
+          @include sp() {
+            display: none;
+          }
 
           ul {
             display: flex;
@@ -226,6 +236,11 @@
 .l_main {
   background: #dfdfdf;
   height: auto;
+  margin: 100px 0 0;
+
+  @include sp() {
+    margin: 60px 0 0;
+  }
 
   .l_article {
     background: #dfdfdf;
